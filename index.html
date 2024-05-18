@@ -178,6 +178,14 @@ function getPagesRangeCount(bookList, pagesRange) {
   return count;
 }
 
+function getMonth(date) {
+  if (!date)
+    return "";
+  var split = date.split("-");
+	var month = split[0] + "年" + split[1] + "月";
+  return month;
+}
+
 function getYear(date) {
   if (!date)
     return "";
