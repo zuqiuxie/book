@@ -20,7 +20,25 @@ var boughtBooks = [
 ];
 
 
+function renderBookList(bookList, media, pagesRange, order) {
+  var s = "<div class=bookList>";
+  var currentReadYear = "";
+  var currentReadMonth = "";
+  
+  if (order == "按评级序") {
+    bookList = sortBookList(bookList, compareByRating);
+  } else if (order == "ReadYearAndRating") {
+    bookList = sortBookList(bookList, compareByReadYearAndRating);
+  }
 
+  for (var book of bookList) {
+    if (media && media != "所有介质" && media != book.media)
+      continue;
+    if (pagesRange && pagesRange != "所有") {
+      var bookPagesRange = getPagesRange(book.pages);
+      if (bookPagesRange != pagesRange)
+        continue;
+    }
     var readYear = getYear(book.readDate);
     if (currentReadYear != readYear) {
       var readYearCount = getReadYearCount(bookList, readYear, media, pagesRange);
