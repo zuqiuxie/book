@@ -956,27 +956,15 @@ a:visited {
     <div class="option group-none" onclick="setOption('readBooks', 'group', 'none')">不分组</div>
     </script>  
   </div>
-  <div class="options order">
-    <script>
-      document.write(renderOrderOptionButton("按阅读日期序", "readBooks"));
-      document.write(renderOrderOptionButton("按评级序", "readBooks"));
-    </script>
-  </div>
+
   <div class="bookListContainer">
     <script>document.write(renderBookList(readBooks));</script>
   </div>
 </div>
-<div class="bookCollection media-所有介质" id="suspendedBooks">
-  <h1><a target=_blank href="https://www.douban.com/doulist/126343331/">暂停<span class=count><script>document.write(suspendedBooks.length)</script></span></a></h1>
-  <script>document.write(renderBookList(suspendedBooks));</script>
-</div>
 
 <div class="menu" id="menu">
   <div class="closeButton" onclick="menu.style.display = 'none'">×</div>
-  <a href="#readingBooks">在读<span class=count><script>document.write(readingBooks.length)</script></span></a>
   <a href="#boughtBooks">已购买<span class=count><script>document.write(boughtBooks.length)</script></span></a>
-  <a href="#readBooks">读过<span class=count><script>document.write(readBooks.length)</script></span></a>
-  <a href="#suspendedBooks">暂停<span class=count><script>document.write(suspendedBooks.length)</script></span></a>
 </div>
 
 </body>
