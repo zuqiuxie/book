@@ -987,16 +987,12 @@ a:visited {
       document.write(renderMediaOptionButton("EPUB", "readBooks"));
     </script>
   </div>
+  <script>
   <div class="options group">
     <div class="option group-month" onclick="setOption('readBooks', 'group', 'month')">月</div>
     <div class="option group-year" onclick="setOption('readBooks', 'group', 'year')">年</div>
     <div class="option group-none" onclick="setOption('readBooks', 'group', 'none')">不分组</div>
-  </div>
-  <div class="options order">
-    <script>
-      document.write(renderOrderOptionButton("按阅读日期序", "readBooks"));
-      document.write(renderOrderOptionButton("按评级序", "readBooks"));
-    </script>
+  </script>
   </div>
   <div class="bookListContainer">
     <script>document.write(renderBookList(readBooks));</script>
