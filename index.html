@@ -146,19 +146,6 @@ function renderOrderOptionButton(order, bookListName) {
   return s;
 }
 
-function getPagesRange(pageCount) {
-  if (!pageCount)
-    return "未知";
-  else if (pageCount < 200)
-    return "200页以下";
-  else if (pageCount < 500 && pageCount >= 200)
-    return "200到500页";
-  else if (pageCount < 1000 && pageCount >= 500)
-    return "500到1000页";
-  else if (pageCount >= 1000)
-    return "1000页以上";
-}
-
 function getMediaCount(bookList, media) {
   var count = 0;
   for (var book of bookList) {
